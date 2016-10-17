@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/placeholder"-->
+    <!--android:background="@drawable/screenshot_holder">-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp" android:layout_height="575dp"
+    android:background="@drawable/popup_window_background"
+    android:id="@+id/phoneDisplayPopupRelativeLayout"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/relativeLayout"
+        android:background="@color/highlighted_text_material_light" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:id="@+id/textView4"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/phonePopUpExitButton"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/abc_ic_clear_mtrl_alpha"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:clickable="true" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:id="@+id/phonePopUpListView"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Picker"
+        android:id="@+id/textView5"
+        android:textSize="24sp"
+        android:layout_below="@+id/phonePopUpListView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:background="@drawable/color_picker_bar"-->
+        <!--android:id="@+id/view4"-->
+        <!--android:layout_below="@+id/textView5"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="15dp">-->
+
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/phonePopUpSeekBar"
+            android:max="100"
+            android:progress="50"
+            android:layout_below="@+id/textView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp" />
+            <!--android:progressDrawable="@android:color/transparent"-->
+            <!--android:thumb="@drawable/color_picker_style"/>-->
+
+
+        <!--</LinearLayout>-->
+
+
+
+
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/popupSpacer"
+        android:layout_below="@+id/phonePopUpSeekBar"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/popupColorCircle"
+        android:background="@drawable/color_circle"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignEnd="@+id/phonePopUpSeekBar"
+        android:layout_marginEnd="21dp" />
+
+</RelativeLayout>
+    <!--</RelativeLayout>-->

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/starco_blue">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/starcase_logo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:id="@+id/textView"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Disconnected"
+        android:id="@+id/connectionStatusText"
+        android:textSize="28sp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="0dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"
+        android:id="@+id/view2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Spinner
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:id="@+id/codeSpinner"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/view2"
+        android:layout_toStartOf="@+id/messageEditText"
+        android:layout_marginEnd="10dp" />
+
+    <EditText
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageEditText"
+        android:layout_marginLeft="20dp"
+        android:hint="Message Here"
+        android:layout_marginStart="21dp"
+        android:layout_alignBottom="@+id/codeSpinner"
+        android:layout_alignStart="@+id/connectionStatusText" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectSendingRadioGroup"
+        android:layout_alignTop="@+id/codeSpinner"
+        android:layout_alignParentStart="true"
+        android:checkedButton="@+id/sendMessageRadioButton">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendMessageRadioButton"
+            android:layout_marginBottom="50dp"
+            android:layout_alignBottom="@+id/uploadImagePreview"
+            android:layout_alignStart="@+id/textView" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendPictureRadioButton"
+            android:layout_below="@+id/view2"
+            android:layout_alignStart="@+id/textView"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp" />
+
+    </RadioGroup>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:id="@+id/uploadImagePreview"
+        android:layout_below="@+id/codeSpinner"
+        android:layout_alignStart="@+id/codeSpinner"
+        android:layout_marginTop="11dp"
+        android:src="@color/abc_input_method_navigation_guard" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:id="@+id/uploadPictureButton"
+        android:layout_alignBottom="@+id/selectSendingRadioGroup"
+        android:layout_alignEnd="@+id/messageEditText"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/sendButton"
+        android:layout_below="@+id/uploadImagePreview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:onClick="sendStringOnClick"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:id="@+id/view3"
+        android:layout_below="@+id/sendButton"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sent"
+        android:id="@+id/textView2"
+        android:textSize="22sp"
+        android:layout_below="@+id/view3"
+        android:layout_alignStart="@+id/uploadImagePreview" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Received"
+        android:id="@+id/textView3"
+        android:textSize="22sp"
+        android:layout_above="@+id/resultsListView"
+        android:layout_toEndOf="@+id/sendButton" />
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/resultsListView"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2" />
+
+</RelativeLayout>

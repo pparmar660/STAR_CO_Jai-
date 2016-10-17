@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/starco_blue">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/phoneDisplayStarcaseLogo"
+        android:src="@drawable/phone_icon"
+        android:layout_marginStart="76dp"
+        android:layout_alignTop="@+id/phoneDisplayBackButton"
+        android:layout_toEndOf="@+id/phoneDisplayBackButton" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:id="@+id/phoneDisplayBackButton"
+        android:src="@drawable/return_arrow"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scaleX="-1"
+        android:clickable="true"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneEnableSwitch"
+        android:switchMinWidth="30dp"
+        android:thumb="@drawable/thumb"
+        android:track="@drawable/track"
+        android:layout_marginEnd="25dp"
+        android:layout_alignTop="@+id/phoneDisplayStarcaseLogo"
+        android:layout_alignParentEnd="true"
+        android:textOn=""
+        android:textOff=""/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/phoneDisplayStarcaseLogo"
+        android:id="@+id/phoneDisplayRelativeLayout"
+        android:layout_marginTop="10dp">
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="240dp"
+            android:id="@+id/displayLayoutView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/preview_border" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/phoneDisplayIconPreview"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/phone_icon"
+            android:layout_alignTop="@+id/displayLayoutView"
+            android:layout_alignStart="@+id/phoneDisplayLargeTextPreview"
+            android:clickable="true"
+            android:background="@drawable/preview_border" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="70dp"
+            android:text="New Text"
+            android:id="@+id/phoneDisplayNameTextPreview"
+            android:layout_alignTop="@+id/phoneDisplayIconPreview"
+            android:layout_alignEnd="@+id/phoneDisplaySlider"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/preview_border" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="New Text"
+            android:id="@+id/phoneDisplayLargeTextPreview"
+            android:layout_marginBottom="20dp"
+            android:layout_alignBottom="@+id/displayLayoutView"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/preview_border" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/phoneDisplayListView"
+            android:layout_below="@+id/displayLayoutView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneDisplaySlider"
+            android:layout_marginBottom="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text Size"
+            android:id="@+id/textView6"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:layout_above="@+id/phoneDisplaySlider"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display"
+        android:id="@+id/titleMenuTextView"
+        android:textSize="22sp"
+        android:layout_alignTop="@+id/phoneDisplayStarcaseLogo"
+        android:layout_toEndOf="@+id/phoneDisplayStarcaseLogo"
+        android:layout_marginStart="20dp" />
+
+</RelativeLayout>

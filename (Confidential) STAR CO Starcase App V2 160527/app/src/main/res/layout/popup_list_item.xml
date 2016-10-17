@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="40dp">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/addItemImageView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/plus_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name, First Name"
+        android:id="@+id/addItemTextView"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/addItemImageView"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="5dp"
+        android:id="@+id/spaceOne"
+        android:layout_below="@+id/addItemImageView"
+        android:layout_alignStart="@+id/addItemImageView"
+        android:layout_alignEnd="@+id/addItemImageView"
+        android:layout_alignParentBottom="true" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="5dp"
+        android:id="@+id/spaceTwo"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/addItemImageView"
+        android:layout_above="@+id/addItemImageView"
+        android:layout_toStartOf="@+id/addItemTextView" />
+</RelativeLayout>

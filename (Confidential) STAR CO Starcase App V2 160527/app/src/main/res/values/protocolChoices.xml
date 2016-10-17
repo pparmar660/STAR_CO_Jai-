@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="protocolChoices">
+        <item>0x10</item>
+        <item>0x15</item>
+        <item>0x20</item>
+        <item>0x25</item>
+        <item>0x30</item>
+        <item>0x35</item>
+        <item>0x40</item>
+        <item>0x45</item>
+        <item>0x50</item>
+        <item>0x55</item>
+        <item>0x60</item>
+        <item>0x65</item>
+        <item>0x70</item>
+    </string-array>
+</resources>
